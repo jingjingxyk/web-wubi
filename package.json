@@ -4,12 +4,13 @@
   "description": "在线五笔输入法",
   "main": "background.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "release": "bash release-archive.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jingjingxyk/online-wubi-input-method-browser-extension.git"
+    "url": "git+https://github.com/yanhuacuo/web-wubi.git"
   },
   "keywords": [
     "wubi-input-method-browser-extension"
@@ -17,9 +18,9 @@
   "author": "jingjingxyk",
   "license": "GPL-3",
   "bugs": {
-    "url": "https://github.com/jingjingxyk/online-wubi-input-method-browser-extension/issues"
+    "url": "https://github.com/yanhuacuo/web-wubi.git/issues"
   },
-  "homepage": "https://github.com/jingjingxyk/online-wubi-input-method-browser-extension#readme",
+  "homepage": "https://github.com/yanhuacuo/web-wubi.git",
   "dependencies": {
     "prettier": "^2.8.7"
   }

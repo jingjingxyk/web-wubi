@@ -1,8 +1,8 @@
 # web-wubi
+
 类「google-input-tools」工具
 
 > 在线五笔输入法 broser extension
-
 
 ## 五笔资源链接
 
