@@ -2,7 +2,7 @@
 
 类「google-input-tools」工具
 
-> 在线五笔输入法 broser extension
+> 在线五笔输入法 浏览器扩展
 
 ## 五笔资源链接
 
