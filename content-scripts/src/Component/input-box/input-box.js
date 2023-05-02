@@ -1,9 +1,7 @@
-import {bindinputMethod} from './input-method.js'
+import { bindinputMethod } from "./input-method.js";
 
-let boxBindInputBox=()=>{
-    bindinputMethod()
-}
+let boxBindInputBox = () => {
+  bindinputMethod();
+};
 
-export{
-    boxBindInputBox
-}
+export { boxBindInputBox };
