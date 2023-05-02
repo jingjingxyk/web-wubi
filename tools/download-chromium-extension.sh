@@ -11,8 +11,9 @@ fi
 
 # 执行脚本命令
 
-# bash  tools/download-chromium-extension.sh  --proxy 1
-
+# bash  tools/download-chromium-extension.sh
+# 使用代理下载源码
+#  bash tools/update-library.sh --proxy http://192.168.3.26:8015
 
 # 下载 chromium 扩展，并解压
 
@@ -20,9 +21,6 @@ fi
 # 参考文档： https://www.cnblogs.com/jingjingxyk/p/16821342.html
 
 
-
-# 使用代理下载源码
-#  bash tools/update-library.sh --proxy http://192.168.3.26:8015
 
 PROXY_URL=''
 while [ $# -gt 0 ]; do
