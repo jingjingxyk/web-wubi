@@ -1,2 +1,5 @@
 bin
 var
+cacert.pem
+vendor
+composer.lock

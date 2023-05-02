@@ -30,6 +30,8 @@ let input_method_core = (key, code) => {
   // Esc      KeyboardEvent:  key='Escape' | code='Escape'
   //           KeyboardEvent: key='Shift' | code='ShiftLeft'
   //           KeyboardEvent: key='Shift' | code='ShiftLeft'
+  // 退格      KeyboardEvent: key='Backspace' | code='Backspace'
+
   //字母处理模式
   let pattern = /^\w$/;
   let re = null;
