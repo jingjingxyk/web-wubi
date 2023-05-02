@@ -1,19 +1,18 @@
-
 #web-wubi-input-method-box {
-    position: fixed;
-    width: 120px;
-    height: 72px;
+  position: fixed;
+  width: 120px;
+  height: 72px;
 
-    right: 1px;
-    bottom: 20px;
+  right: 1px;
+  bottom: 20px;
 }
 
 #web-wubi-input-method-box .wrap {
-    position: absolute;
-    width: 120px;
-    height: 72px;
+  position: absolute;
+  width: 120px;
+  height: 72px;
 }
 
 #web-wubi-input-method-box .wrap .main .input_method_box {
-    color: #ff3388;
+  color: #ff3388;
 }
