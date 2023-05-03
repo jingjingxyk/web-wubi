@@ -51,6 +51,9 @@ cp -f frontend-utils/utils.js ${__DIR__}/../third_party/jingjingxyk/frontend-uti
 cd ${__DIR__}/temp
 test -d 98wubi-tables || git clone -b master  https://github.com/yanhuacuo/98wubi-tables.git  --depth=1 --progress
 
+cd ${__DIR__}/temp
+test -d 98wubi || git clone -b master  https://github.com/yanhuacuo/98wubi.git  --depth=1 --progress
+
 cd ${__DIR__}/
 
 exit 0

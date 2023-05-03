@@ -6,3 +6,6 @@ tools/temp
 server/php/.idea
 server/php/var
 server/php/bin/
+server/data
+!server/data/.gitkeep
+tools/python/Pipfile.lock
