@@ -42,7 +42,7 @@ let input_method_core = (key, code) => {
     keyword.push(input_word);
     console.log(keyword);
     //去查表
-    send(JSON.stringify(keyword), (response) => {
+    send(keyword, (response) => {
       //查询结果
       console.log(response);
       // show_input_box_ui()

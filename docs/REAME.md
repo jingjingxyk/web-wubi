@@ -5,4 +5,5 @@
 ## DOM 使用 shadow dom 打算这么做
 
 ## 输入框想要的样式如下：
+
 ![](ibus-rime.png)

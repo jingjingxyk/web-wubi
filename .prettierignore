@@ -7,4 +7,5 @@ Thumbs.db
 _metadata/
 third_party
 dist
-/tools
+tools
+server

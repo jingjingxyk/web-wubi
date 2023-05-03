@@ -1,7 +1,7 @@
 <?php
 
-define('WUBI_FILE_DATA', realpath(__DIR__ . '/../data/data.txt'));
-define('WUBI_FILE_DATA_SIZE', filesize(WUBI_FILE_DATA));
+define('WUBI_DATA_FILE', realpath(__DIR__ . '/../data/data.txt'));
+define('WUBI_DATA_FILE_SIZE', filesize(WUBI_DATA_FILE));
 
 /*
 // 单行最长 长度
