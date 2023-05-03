@@ -10,7 +10,7 @@
 
 */
 
-import { show_input_box_ui } from "./input-method-ui.js";
+import { show_input_method_options } from "./input-method-ui.js";
 import { send } from "../message/send.js";
 
 let keyword = [];
@@ -46,10 +46,15 @@ let input_method_core = (key, code) => {
       //查询结果
       // show_input_box_ui()
 
-      if(response && response['code'] && (response['code']===200)){
-         console.log(response['data'],response['data']['keyword'],response['data']['options']);
+      if (response && response["code"] && response["code"] === 200) {
+        console.log(
+          response["data"],
+          response["data"]["keyword"],
+          response["data"]["options"]
+        );
+        console.log(response["data"]["options"]);
+        show_input_method_options(response["data"]);
       }
-
     });
     if (keyword.length > 4) {
       keyword = [];

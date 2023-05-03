@@ -54,7 +54,7 @@ class ApiController
                     }
                     $result['data'] = [
                         'keyword' => $res['key'],
-                        'options' => $word_arr
+                        'options' => array_values($word_arr)
                     ];
                     $result['msg'] = 'ok';
                 }
