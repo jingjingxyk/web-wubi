@@ -8,7 +8,6 @@ function send(keyword, callback) {
       namespace: "wubi-online-input-method",
     },
     function (response) {
-      console.log(response);
       callback(response);
     }
   );

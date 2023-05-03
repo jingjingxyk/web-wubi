@@ -44,8 +44,12 @@ let input_method_core = (key, code) => {
     //去查表
     send(keyword, (response) => {
       //查询结果
-      console.log(response);
       // show_input_box_ui()
+
+      if(response && response['code'] && (response['code']===200)){
+         console.log(response['data'],response['data']['keyword'],response['data']['options']);
+      }
+
     });
     if (keyword.length > 4) {
       keyword = [];
