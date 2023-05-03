@@ -46,7 +46,7 @@ if __name__ == '__main__':
         with open(project_dir + '/server/data/data.txt', 'w+') as file:
             file.write(data)
 
-    # 转成 unicode 表
+    # 转成 unicode 表  todo
 
     end_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(end_time)
