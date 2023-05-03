@@ -38,13 +38,12 @@ case $ARCH in
   ;;
 esac
 
-
 VERSION='v5.0.2'
 
-if [[ $OS = 'macos' ]] ;then
+if [[ $OS = 'macos' ]]; then
   VERSION='v5.0.1'
-  if [[ $ARCH = "arm64" ]] ;then
-      VERSION='v4.8.13'
+  if [[ $ARCH = "arm64" ]]; then
+    VERSION='v4.8.13'
   fi
 fi
 
@@ -62,6 +61,10 @@ while [ $# -gt 0 ]; do
   --mirror)
     mirror="$2"
     shift
+    ;;
+  --proxy)
+    export http_proxy="$2"
+    export https_proxy="$2"
     ;;
   --*)
     echo "Illegal option $1"
