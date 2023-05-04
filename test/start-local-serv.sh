@@ -11,5 +11,4 @@ __PROJECT__=$(
 )
 cd ${__PROJECT__}
 
-cd ${__PROJECT__}/test
 python3 -m http.server 8000

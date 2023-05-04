@@ -23,7 +23,7 @@ class ApiController
         ];
         $parameter = $request->getContent();
         $parameter = json_decode($parameter, true);
-        if (!empty($parameter)) {
+        if (!empty($parameter) && !empty($parameter['action']) && !empty($parameter['content']) & !empty($parameter['namespace'])) {
             $action = $parameter['action'];
             $content = $parameter['content'];
             $namespace = $parameter['namespace'];

@@ -76,6 +76,18 @@ run(function () use ($table, $fp, $fileHandlerPool) {
     });
     $server->handle('/api', function ($request, $response) use ($server) {
         $response->header('Content-Type', 'application/json; charset=utf-8');
+        $response->header('access-control-allow-credentials', 'true');
+        $response->header('access-control-allow-methods', 'GET,HEAD,POST,OPTIONS');
+        $response->header('access-control-allow-headers', 'content-type,Authorization');
+        $origin = empty($request->header['origin']) ? '*' : $request->header['origin'];
+        $response->header('access-control-allow-origin', $origin);
+        $request_method = empty($request->header['request_method']) ? '' : $request->header['request_method'];
+        if ($request_method == "OPTIONS") {
+            $response->header->status(200);
+            $response->end();
+            return null;
+        }
+
         list($controller, $action) = explode('/', trim($request->server['request_uri'], '/'));
 
         $controller = empty($controller) ? 'api' : $controller;
