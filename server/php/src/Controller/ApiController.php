@@ -16,12 +16,25 @@ class ApiController
     # 使用注解 ，反射注入 完成依赖注入，会省事很多 todo
     public function queryAction(Request $request, Response $response)
     {
+        $data = $request->getContent();
+        $result = $this->query($data);
+        $response->end(json_encode($result, JSON_UNESCAPED_UNICODE));
+    }
+
+    public function webSocketQueryAction($frame, Response $ws)
+    {
+        $data = $frame->data;
+        $result = $this->query($data);
+        $ws->push(json_encode($result, JSON_UNESCAPED_UNICODE));
+    }
+
+    private function query(string $parameter)
+    {
         $result = [
             "code" => 200,
             "data" => [],
             "msg" => 'no data'
         ];
-        $parameter = $request->getContent();
         $parameter = json_decode($parameter, true);
         if (!empty($parameter) && !empty($parameter['action']) && !empty($parameter['content']) & !empty($parameter['namespace'])) {
             $action = $parameter['action'];
@@ -60,7 +73,7 @@ class ApiController
                 }
             }
         }
-        $response->end(json_encode($result, JSON_UNESCAPED_UNICODE));
+        return $result;
     }
 
     public function __call($name, $arguments)

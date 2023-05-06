@@ -2,10 +2,14 @@
 
 namespace Jingjingxyk\WebWubiServer;
 
+use Swoole\Http\Request;
+use Swoole\Http\Response;
+use Swoole\WebSocket\CloseFrame;
 use Swoole\Coroutine\Http\Server;
 use function Swoole\Coroutine\run;
 use Swoole\Table;
 use Swoole\ConnectionPool;
+use Jingjingxyk\WebWubiServer\Controller\ApiController;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
@@ -74,7 +78,7 @@ run(function () use ($table, $fp, $fileHandlerPool) {
     $server->handle('/', function ($request, $response) {
         $response->end("<h1>Index</h1>");
     });
-    $server->handle('/api', function ($request, $response) use ($server) {
+    $server->handle('/api', function (Request $request, Response $response) use ($server) {
         $response->header('Content-Type', 'application/json; charset=utf-8');
         $response->header('access-control-allow-credentials', 'true');
         $response->header('access-control-allow-methods', 'GET,HEAD,POST,OPTIONS');
@@ -106,6 +110,30 @@ run(function () use ($table, $fp, $fileHandlerPool) {
             $response->end(json_encode(["code" => 500, 'msg' => 'system error' . $e->getMessage()]));
         }
     });
+
+    $server->handle('/websocket', function (Request $request, Response $ws) use ($server) {
+        $ws->upgrade();
+        while (true) {
+            $frame = $ws->recv();
+            if ($frame === '') {
+                $ws->close();
+                break;
+            } else {
+                if ($frame === false) {
+                    echo 'errorCode: ' . swoole_last_error() . "\n";
+                    $ws->close();
+                    break;
+                } else {
+                    if ($frame->data == 'close' || get_class($frame) === CloseFrame::class) {
+                        $ws->close();
+                        break;
+                    }
+                    (new ApiController())->setServer($server)->webSocketQueryAction($frame, $ws);
+                }
+            }
+        }
+    });
+
     $server->handle('/stop', function ($request, $response) use ($server) {
         $response->end("<h1>Stop</h1>");
         $server->fp->fclose();

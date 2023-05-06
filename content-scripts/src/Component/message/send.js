@@ -6,6 +6,17 @@ function send(keyword, callback) {
         },
         namespace: "wubi-online-input-method",
     }
+
+    //test
+    import('./socket.js').then((x) => {
+        x.sender(data,(response)=>{
+            console.log('接收到数据',response)
+           callback(JSON.parse(response))
+        })
+    });
+
+
+    return ;
     if (window.wubi_online_runtime_mode !== 'native') {
         chrome.runtime.sendMessage(
             data
