@@ -27,3 +27,9 @@ rime 是啥: https://github.com/rime/home/wiki/RimeWithSchemata
 
 > 寻找姓鸭的人 有这样一群人，他们的姓氏“nià”，但因在信息系统中打不出来，而被迫改姓“鸭”。姓氏是一种应该被传承的宝贵归属感，它不应该被改变。 姓氏里有生僻字有多难
 > https://haokan.baidu.com/v?pd=wisenatural&vid=5117727351550481705
+
+
+国家标准 GB18030-2022   GB 18030—2022《信息技术  中文编码字符集》  http://www.nits.org.cn/index/page/article/1805
+GB18030-2022与UCS代码映射表  http://www.nits.org.cn/index/article/4034
+国标 国家标准、行业标准  https://github.com/lzimd/crypt-standard
+千千秀字 汉字 Unicode 编码范围  https://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php
