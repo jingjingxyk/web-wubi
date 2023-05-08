@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*", "file://*/*"],
-      "js": ["content-scripts/wubi-assistant-search.js"],
+      "js": ["content-scripts/app.js"],
       "run_at": "document_idle"
     }
   ],

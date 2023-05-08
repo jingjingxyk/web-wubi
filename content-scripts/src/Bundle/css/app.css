@@ -1,0 +1,57 @@
+#web-wubi-input-method-box {
+  position: fixed;
+  width: 120px;
+  height: 72px;
+
+  right: 1px;
+  bottom: 20px;
+}
+
+#web-wubi-input-method-box .wrap {
+  position: absolute;
+  width: 120px;
+  height: 72px;
+}
+
+#web-wubi-input-method-box .wrap .main .input_method_box {
+  color: #ff3388;
+}
+
+#web-wubi-intput-box {
+  position: fixed;
+  width: 120px;
+  height: 70px;
+
+  right: 318px;
+  bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+#web-wubi-intput-box .web-wubi-input-box-wrap {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  bottom: 70px;
+  background-color: rgb(34, 34, 34);
+}
+
+#web-wubi-intput-box .web-wubi-input-box-wrap .web-wubi-input-main {
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+#web-wubi-intput-box .web-wubi-input-main ol {
+  width: 389px;
+  height: 389px;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+#web-wubi-intput-box .web-wubi-input-main ol li {
+  background-color: #e95420;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  list-style: none;
+}

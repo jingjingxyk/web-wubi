@@ -1,6 +1,6 @@
 # web-wubi
 
-类「google-input-tools」工具
+类「google-inputMethod-tools」工具
 
 > 在线五笔输入法 浏览器扩展
 

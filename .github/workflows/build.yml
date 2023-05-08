@@ -1,6 +1,6 @@
-name: "打包"
-on:
-  workflow_dispatch:
+name: build
+
+on: [push, pull_request]
 
 jobs:
   build:
